@@ -73,8 +73,8 @@ public class UserInterface {
         JComboBox<String> selectedFunction = new JComboBox<>();
         controlPanel.add(selectFunctionPanel);
         selectedFunction.addItem("y' = -2x");
-//        selectedFunction.addItem("1/(x^4 + 4)");
-//        selectedFunction.addItem("x^2");
+        selectedFunction.addItem("y' = x - y");
+
         selectFunctionPanel.add(selectedFunction);
 
         selectedFunction.addActionListener(e -> {
@@ -88,9 +88,14 @@ public class UserInterface {
                         }
                     };
                     break;
-//                case "1/(x^4 + 4)":
-//                    this.baseFunction = arg -> 1/(Math.pow(arg, 4) + 4);
-//                    break;
+                case "y' = x - y":
+                    this.baseFunction = new Function() {
+                        @Override
+                        public double getValue(double x, double y) {
+                            return x - y;
+                        }
+                    };
+                    break;
 //                case "x^2":
 //                    this.baseFunction = arg -> arg*arg;
 //                    break;
@@ -156,11 +161,10 @@ public class UserInterface {
                 JTextField accText = ((JTextField)fieldsPanel.getComponent(7));
                 acc = Double.parseDouble(accText.getText().replace(',', '.'));
 
-                if (acc == 0)
+                if (acc == 0 || x0 >= xn)
                     throw new NumberFormatException();
 
-                RungeKuttaMethod rkm = new RungeKuttaMethod(x0, y0, xn, acc, baseFunction);
-                MilneMethod mm = new MilneMethod(rkm.getValues(), acc, baseFunction);
+                MilneMethod mm = new MilneMethod(x0, y0, xn, acc, baseFunction);
                 this.milneMethod = mm;
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(mainFrame, "Проверьте правильность введенных данных",

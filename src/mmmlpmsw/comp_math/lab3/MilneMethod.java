@@ -9,8 +9,8 @@ public class MilneMethod {
     private ArrayList<Pair<Double, Double>> values;
     Function function;
 
-    public MilneMethod(ArrayList<Pair<Double, Double>> answers, double step, Function function) {
-        values = answers;
+    public MilneMethod(double x0, double y0, double xn, double step, Function function) {
+        values = new RungeKuttaMethod(x0, y0, xn, step, function).getValues();
         this.function = function;
         this.step = step;
         for (int i = 4; i < values.size(); i++)

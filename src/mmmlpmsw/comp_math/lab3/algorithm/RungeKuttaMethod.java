@@ -1,6 +1,8 @@
-package mmmlpmsw.comp_math.lab3;
+package mmmlpmsw.comp_math.lab3.algorithm;
 
 import javafx.util.Pair;
+import mmmlpmsw.comp_math.lab3.Function;
+
 import java.util.ArrayList;
 
 public class RungeKuttaMethod {
@@ -34,5 +36,14 @@ public class RungeKuttaMethod {
     public ArrayList<Pair<Double, Double>> getValues() {
         return values;
     }
+    public ArrayList<Pair<Double, Double>> getValues(int count) {
+        ArrayList<Pair<Double, Double>> ans = new ArrayList<>();
+        for (int i = 0; i < count; i ++) {
+            ans.add(values.get(i));
+        }
+        return ans;
+    }
+
+
 
 }

@@ -1,8 +1,7 @@
 package mmmlpmsw.comp_math.lab3.gui;
 
 import mmmlpmsw.comp_math.lab3.Function;
-import mmmlpmsw.comp_math.lab3.MilneMethod;
-import mmmlpmsw.comp_math.lab3.RungeKuttaMethod;
+import mmmlpmsw.comp_math.lab3.algorithm.MilneMethod;
 import mmmlpmsw.comp_math.lab3.spline_interpolation.SplinesStorage;
 
 import javax.swing.*;

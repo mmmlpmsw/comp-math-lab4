@@ -17,8 +17,7 @@ public class MilneMethod {
         this.step = step;
         this.xn = xn;
         this.currentX = x0 + 3 * step;
-        while (currentX < xn)
-            calculate();
+        calculate();
     }
 
     private void calculate() {
@@ -35,7 +34,7 @@ public class MilneMethod {
                     values.get(i - 1).getValue());
             f = function.getValue(values.get(i-1).getKey() + step,
                     values.get(i - 4).getValue() +
-                            4 * step * (2 * f3 + f2 + 2 * f1)/3);
+                            4 * step * (2 * f3 - f2 + 2 * f1)/3);
             double y = f;
             do {
                 f = y;

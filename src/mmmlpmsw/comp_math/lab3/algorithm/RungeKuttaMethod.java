@@ -11,13 +11,14 @@ public class RungeKuttaMethod {
     private ArrayList<Pair<Double, Double>> values;
     private Function function;
 
-    public RungeKuttaMethod(double x_start, double y_start, double x_end, double acc, Function function) {
-        this.step = acc;
+    public RungeKuttaMethod(double x0, double y0, double xn, double accuracy, Function function) {
+        this.step = Math.pow(accuracy, 0.25);
+//        this.step = acc;
         this.function = function;
         values = new ArrayList<>();
-        values.add(new Pair<>(x_start, y_start));
-        double y_next = y_start;
-        for (double i = x_start; i < x_end; i += step) {
+        values.add(new Pair<>(x0, y0));
+        double y_next = y0;
+        for (double i = x0; i < xn; i += step) {
             y_next = getNextYValue(i, y_next);
             values.add(new Pair<>(i+step, y_next));
         }

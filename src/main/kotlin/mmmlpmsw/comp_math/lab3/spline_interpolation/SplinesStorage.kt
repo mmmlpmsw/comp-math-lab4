@@ -1,6 +1,6 @@
-package ktln.mmmlpmsw.comp_math.lab3.spline_interpolation
+package mmmlpmsw.comp_math.lab3.spline_interpolation
 
-import ktln.mmmlpmsw.comp_math.lab3.Function
+import mmmlpmsw.comp_math.lab3.Function
 
 class SplinesStorage (private val x: DoubleArray, private val y: DoubleArray) {
 

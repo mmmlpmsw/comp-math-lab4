@@ -1,9 +1,8 @@
-package ktln.mmmlpmsw.comp_math.lab3.gui
+package mmmlpmsw.comp_math.lab3.gui
 
-import ktln.mmmlpmsw.comp_math.lab3.Function
-import ktln.mmmlpmsw.comp_math.lab3.algorithm.MilneMethod
-import ktln.mmmlpmsw.comp_math.lab3.gui.GraphMaker
-import ktln.mmmlpmsw.comp_math.lab3.spline_interpolation.SplinesStorage
+import mmmlpmsw.comp_math.lab3.Function
+import mmmlpmsw.comp_math.lab3.algorithm.MilneMethod
+import mmmlpmsw.comp_math.lab3.spline_interpolation.SplinesStorage
 import java.awt.GridLayout
 import java.awt.event.ActionEvent
 import javax.swing.*

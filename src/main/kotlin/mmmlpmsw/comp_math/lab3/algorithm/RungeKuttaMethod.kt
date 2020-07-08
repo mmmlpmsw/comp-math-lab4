@@ -1,7 +1,7 @@
-package ktln.mmmlpmsw.comp_math.lab3.algorithm
+package mmmlpmsw.comp_math.lab3.algorithm
 
 import javafx.util.Pair
-import ktln.mmmlpmsw.comp_math.lab3.Function
+import mmmlpmsw.comp_math.lab3.Function
 import java.util.*
 
 
